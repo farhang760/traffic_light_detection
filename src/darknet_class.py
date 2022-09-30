@@ -72,7 +72,7 @@ def detect(net, meta, image, thresh=.5, hier_thresh=.5, nms=.45):
     darknet_library.rgbgr_image(im)
     num = c_int(0)
     pnum = pointer(num)
-    predict_image(net, im)
+    darknet_library.predict_image(net, im)
     dets = darknet_library.get_network_boxes(net, im.w, im.h, thresh,
                              hier_thresh, None, 0, pnum)
     num = pnum[0]
