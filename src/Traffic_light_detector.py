@@ -5,7 +5,6 @@ from std_msgs.msg import String, Bool, Float32
 from geometry_msgs.msg import Vector3
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
-import darknet_detector
 import darknet_library
 import cv2
 
