@@ -22,7 +22,7 @@ This software is built on the Robotic Operating System ([ROS]), which needs to b
 In order to install traffic_light_detection, clone the latest version using SSH from this repository into your catkin workspace and compile the package using ROS.
 
     cd catkin_workspace/src
-    git clone --recursive git@github.com:leggedrobotics/darknet_ros.git
+    git clone --recursive git@github.com:farhang760/traffic_light_detection.git
     cd darknet 
     open Makefile and change OPENCV = 1 (for better performance if you have GPU support change CUDA = 1)
     make
