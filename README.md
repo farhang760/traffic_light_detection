@@ -1,6 +1,4 @@
 # traffic_light_detection
-Traffic light detection with darknet
-# ROS Scenario Simulation
 
 This project is designed to test the traffic light detection for an autonomous vehicle
 
