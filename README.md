@@ -36,7 +36,9 @@ docker build -t traffic_light_detection --progress=plain .
 > **Note:** Ensure you can run docker without sudo. Building the conainer takes between 30 minutes and 1 hour depending on your systems performance. 
 
 Run the Container:
+
 xhost +
+
 docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --env="QT_X11_NO_MITSHM=1" traffic_light_detection
 
 
