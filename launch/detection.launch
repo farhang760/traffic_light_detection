@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+   
+      <arg name="video_address" value="$(find traffic_light_detection)/videos/traffic_light_hw.mp4" />
+      <arg name="config_address" value="$(find traffic_light_detection)/darknet/cfg/yolov3-tiny.cfg" />
+      <arg name="weight_address" value="$(find traffic_light_detection)/darknet/yolov3-tiny.weights" />
+      <arg name="data_address" value="$(find traffic_light_detection)/darknet/cfg/traffic.data" />
+      <arg name="darknet_library" value="$(find traffic_light_detection)/darknet/libdarknet.so" />
+
+   <node name="traffic_light_detector" pkg="traffic_light_detection" type="Traffic_light_detector.py"/>
+      <param name="video_address" value="$(arg video_address)"/>
+      <param name="config_address" value="$(arg config_address)"/>
+      <param name="weight_address" value="$(arg weight_address)"/>
+      <param name="data_address" value="$(arg data_address)"/>
+      <param name="darknet_library" value="$(arg darknet_library)"/>
+</launch>

@@ -1,0 +1,4 @@
+[submodule "darknet"]
+	path = darknet
+	url = https://github.com/farhang760/darknet
+	branch = python_support
