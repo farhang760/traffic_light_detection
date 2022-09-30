@@ -33,7 +33,7 @@ Build the Docker Container:
 
 docker build -t traffic_light_detection --progress=plain .
 ```
-> **Note:** Ensure you can run docker without sudo. Building the conainer takes between 30 minutes and 1 hour depending on your systems performance. 
+> **Note:** Ensure you can run docker without sudo. Building the conainer takes between 10 minutes and 30 minutes depending on your systems performance. 
 
 Run the Container:
 ```bash
