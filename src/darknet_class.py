@@ -5,6 +5,7 @@ import random
 import cv2
 import time
 import numpy as np
+import darknet_library
 
 
 def sample(probs):
@@ -68,11 +69,11 @@ def array_to_image(arr):
 
 def detect(net, meta, image, thresh=.5, hier_thresh=.5, nms=.45):
     im, image = array_to_image(image)
-    rgbgr_image(im)
+    darknet_library.rgbgr_image(im)
     num = c_int(0)
     pnum = pointer(num)
     predict_image(net, im)
-    dets = get_network_boxes(net, im.w, im.h, thresh,
+    dets = darknet_library.get_network_boxes(net, im.w, im.h, thresh,
                              hier_thresh, None, 0, pnum)
     num = pnum[0]
     if nms: do_nms_obj(dets, num, meta.classes, nms)
