@@ -6,6 +6,7 @@ from geometry_msgs.msg import Vector3
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 import darknet_library
+import darknet_class
 import cv2
 
 class TrafficLightNode:
@@ -58,7 +59,7 @@ class TrafficLightNode:
             if ret == False:
                 break
             resized_image = cv2.resize(cv_image,(800,600))
-            detected_obj = darknet_detector.detect(self.darknet_config, self.darknet_data, resized_image)
+            detected_obj = darknet_class.detect(self.darknet_config, self.darknet_data, resized_image)
 
             if len(detected_obj) and 'traffic light' in detected_obj[0]:
                 x, y, w, h = detected_obj[0][2][0], detected_obj[0][2][1], detected_obj[0][2][2], detected_obj[0][2][3]

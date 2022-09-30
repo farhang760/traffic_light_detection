@@ -90,9 +90,11 @@ RUN mkdir src
 WORKDIR src
 RUN git clone https://github.com/farhang760/traffic_light_detection
 WORKDIR /root
+WORKDIR $PLANNER_WS
+WORKDIR src/traffic_light_detection
 RUN git clone https://github.com/farhang760/darknet 
-WORKDIR /root/darknet
-RUN git checkout python_support
+WORKDIR darknet
+RUN git checkout docker_support
 RUN sed -i 's/GPU=.*/GPU=0/' Makefile 
 RUN sed -i 's/OPENCV=.*/OPENCV=1/' Makefile && \
 	make
