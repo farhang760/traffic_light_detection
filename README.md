@@ -31,7 +31,7 @@ In order to install traffic_light_detection, clone the latest version using SSH 
     
 ### Download weights
 
-The yolov3-tiny.weights and tiny-yolo-voc.weights are downloaded automatically in the CMakeLists.txt file. If you need to download them again, go into the weights folder and download the two pre-trained weights from the COCO data set:
+Download the pre-trained weight from the COCO data set:
 
     cd catkin_workspace/src/traffic_light_detection/darknet/
     wget http://pjreddie.com/media/files/yolov3-tiny.weights
