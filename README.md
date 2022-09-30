@@ -9,6 +9,8 @@ This project is designed to test the traffic light detection for an autonomous v
 
 
 ## Installation
+
+
 ## Dependencies
 This software is built on the Robotic Operating System ([ROS]), which needs to be installed first. Additionally, YOLO for ROS depends on following software:
 
@@ -16,6 +18,30 @@ This software is built on the Robotic Operating System ([ROS]), which needs to b
 - [OpenCV](http://opencv.org/),
 - [Darknet](https://pjreddie.com/darknet/)
  
+
+
+## Install docker
+Follow this instruction for installing docker:
+https://docs.docker.com/engine/install/ubuntu/
+
+## Commands for execution
+
+Get the repository:
+```bash
+cd catkin_workspace/src/traffic_light_detection
+Build the Docker Container:
+
+docker build -t traffic_light_detection --progress=plain .
+```
+> **Note:** Ensure you can run docker without sudo. Building the conainer takes between 30 minutes and 1 hour depending on your systems performance. 
+
+Run the Container:
+xhost +
+docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --env="QT_X11_NO_MITSHM=1" traffic_light_detection
+
+
+## Viewing the report
+Go to **localhost:8080** and take a look at the scenarios.
 
 ### Building
 
