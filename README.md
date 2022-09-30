@@ -1,4 +1,4 @@
-# traffic_light_detection
+# Traffic_light_detection
 
 This project is designed to test the traffic light detection for an autonomous vehicle
 
