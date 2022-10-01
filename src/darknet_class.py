@@ -90,5 +90,5 @@ def detect(net, meta, image, thresh=.5, hier_thresh=.5, nms=.45):
 
     res = sorted(res, key=lambda x: -x[1])
     if isinstance(image, bytes): free_image(im)
-    free_detections(dets, num)
+    darknet_library.free_detections(dets, num)
     return res
