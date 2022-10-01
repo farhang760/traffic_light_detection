@@ -42,8 +42,16 @@ xhost +
 docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --env="QT_X11_NO_MITSHM=1" traffic_light_detection
 ```
 
+
 ## Viewing the report
-Go to **localhost:8080** and take a look at the scenarios.
+open another terminal :
+```bash
+rostopic echo /traffic_light_size
+rostopic echo /traffic_light_detected
+rostopic echo /zone_height
+
+
+```
 
 ### Building
 
